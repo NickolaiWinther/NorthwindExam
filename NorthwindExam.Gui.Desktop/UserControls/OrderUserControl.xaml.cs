@@ -1,4 +1,8 @@
-﻿using System;
+﻿using NorthwindExam.Dal;
+using NorthwindExam.Entities;
+using NorthwindExam.Gui.Desktop.ViewModels;
+using NorthwindExam.WebService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +24,27 @@ namespace NorthwindExam.Gui.Desktop.UserControls
     /// </summary>
     public partial class OrderUserControl : UserControl
     {
+        private OrderViewModel orderViewModel = new OrderViewModel();
+
         public OrderUserControl()
         {
             InitializeComponent();
+            DataContext = orderViewModel;
+
+
+
+            //Test for at se at WebService virker
+            //Rates rates = new RatesWebService().GetRates().rates;
+            //MessageBox.Show(rates.DKK.ToString());
+        }
+
+        private void OrderDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            orderViewModel.SelectedOrder = OrderDataGrid.SelectedItem as Order;
+
+            orderViewModel.Invoices = orderViewModel.GetInvoices();
+
+            orderViewModel.TotalPrice = orderViewModel.GetTotalPrice();
         }
     }
 }

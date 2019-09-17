@@ -40,6 +40,9 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NorthwindExam.Entities\NorthwindExam.Entities.csproj">
-      <Project>{EE212B58-006B-4EB4-9574-47D90C286B89}</Project>
+      <Project>{C0355B22-BE04-4C50-9DA0-3A94491818D2}</Project>
       <Name>NorthwindExam.Entities</Name>
     </ProjectReference>
   </ItemGroup>

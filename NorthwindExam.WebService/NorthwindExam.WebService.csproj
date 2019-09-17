@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C0355B22-BE04-4C50-9DA0-3A94491818D2}</ProjectGuid>
+    <ProjectGuid>{0A5CCCC6-0F23-4795-92D2-65F17F786D15}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NorthwindExam.Entities</RootNamespace>
-    <AssemblyName>NorthwindExam.Entities</AssemblyName>
+    <RootNamespace>NorthwindExam.WebService</RootNamespace>
+    <AssemblyName>NorthwindExam.WebService</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,17 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
@@ -53,38 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alphabetical_list_of_product.cs" />
-    <Compile Include="Category.cs" />
-    <Compile Include="Category_Sales_for_1997.cs" />
-    <Compile Include="Current_Product_List.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="CustomerDemographic.cs" />
-    <Compile Include="Customer_and_Suppliers_by_City.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="Invoice.cs" />
-    <Compile Include="NorthwindModel.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="Orders_Qry.cs" />
-    <Compile Include="Order_Detail.cs" />
-    <Compile Include="Order_Details_Extended.cs" />
-    <Compile Include="Order_Subtotal.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="Products_Above_Average_Price.cs" />
-    <Compile Include="Products_by_Category.cs" />
-    <Compile Include="Product_Sales_for_1997.cs" />
+    <Compile Include="Rates.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Region.cs" />
-    <Compile Include="Sales_by_Category.cs" />
-    <Compile Include="Sales_Totals_by_Amount.cs" />
-    <Compile Include="Shipper.cs" />
-    <Compile Include="Summary_of_Sales_by_Quarter.cs" />
-    <Compile Include="Summary_of_Sales_by_Year.cs" />
-    <Compile Include="Supplier.cs" />
-    <Compile Include="sysdiagram.cs" />
-    <Compile Include="Territory.cs" />
+    <Compile Include="RatesExchange.cs" />
+    <Compile Include="RatesWebService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

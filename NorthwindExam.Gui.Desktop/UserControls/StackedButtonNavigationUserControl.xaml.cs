@@ -31,13 +31,9 @@ namespace NorthwindExam.Gui.Desktop.UserControls
         private void ToggleButtonOrder_Checked(object sender, RoutedEventArgs e)
         {
             if (((ToggleButton)sender).IsChecked ?? false)
-            {
                 mainWindow.DetailsUserControl.Content = new OrderUserControl();
-            }
             else
-            {
                 mainWindow.DetailsUserControl.Content = new UserControl();
-            }
         }
     }
 }
